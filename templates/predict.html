@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Content</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<style>
+body {
+  background-image: url('static/Books-1.webp');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+{% include 'sidebar.html' %}
+<div class="container white lighten-2">
+    <div class="container white lighten-2">
+        <br>
+    <h1>Predict </h1>
+    <form method="POST">
+
+        {% for column in columns %}
+        {% if column != 'index' %}
+        <label for="{{ column }}">{{ column }}:</label>
+        <input type="text" id="{{ column }}" name="{{ column }}" required><br>
+        {% endif %}
+        {% endfor %}
+        <button class="btn waves-effect waves-light" type="submit" >
+                Predict
+                <i class="material-icons right">send</i>
+            </button>
+    </form>
+        <br>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    </div>
+    <br>
+</div>
+
+{% include 'footer.html' %}
+</body>
+</html>

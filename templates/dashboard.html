@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Table</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+          background-image: url('static/Books-1.webp');
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+<body>
+{% include 'sidebar.html' %}
+<br>
+<div class="row">
+    <div class="col s6">
+        <div class="z-depth-3 white lighten-3">
+            <div class="container white lighten-3">
+                <div>
+
+                    <br>
+                    <h2>Unlock the Future of Book Sales with Predictive Analysis!</h2>
+                    <p>In an ever-evolving landscape of publishing, understanding the dynamics of book sales has
+                        become more crucial than ever. "Unlocking the Future" offers a groundbreaking approach to
+                        forecast book sales with precision and insight. Whether you're an author, publisher, or
+                        industry enthusiast, this book equips you with the tools to navigate the complexities of the
+                        market.</p>
+
+                </div>
+
+                <div>
+                    <h2>Our Services</h2>
+                    <p>We offer a range of services tailored to meet your book sales prediction needs:</p>
+                    <ul>
+                        <li>Predictive analysis for book sales</li>
+                        <li>Market trend forecasting</li>
+                        <li>Customized data analytics solutions</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="col s6">
+       <img src="/static/th.jpeg"  width="900" height="600" alt="Italian Trulli">
+    </div>
+</div>
+<br>
+<br>
+    {% include 'footer.html' %}
+</body>
+</html>
